@@ -3,6 +3,7 @@ import "./globals.css";
 import Head from "next/head";
 import Pricing from "@/components/Pricing";
 import Navbar from "@/components/Navbar";
+import Providers from "./Providers";
 
 export const metadata = {
   title: "IMDb Clone",
@@ -17,13 +18,15 @@ export default function RootLayout({ children }) {
         <meta content="IMDb" key="title" />
       </Head>
       <body>
-        {/* Header */}
-        <Header />
-        {/* <Navbar />
+        <Providers>
+          {/* Header */}
+          <Header />
+          {/* <Navbar />
         <Pricing /> */}
-        {/* Navbar*/}
-        {/* SearchBox */}
-        {children}
+          {/* Navbar*/}
+          {/* SearchBox */}
+          {children}
+        </Providers>
       </body>
     </html>
   );
